@@ -22,21 +22,13 @@
     text-align: center;
     color: #e2ff04;
     padding: 10px;
-    /* Añade un poco de espacio entre el texto y el borde */
     border-radius: 5px;
-    /* Redondea las esquinas (opcional) */
     font-weight: bold;
-    /* Establece el texto en negrita */
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    /* Cambia la fuente a Comic Sans */
     text-shadow: 1px 1px 0 #FFA500,
-        /* Sombra de texto a la derecha */
         -1px -1px 0 #020202,
-        /* Sombra de texto a la izquierda */
         1px -1px 0 #330d9a,
-        /* Sombra de texto arriba a la derecha */
         -1px 1px 0 #000000;
-    /* Sombra de texto abajo a la izquierda */
 }
 
 
@@ -59,5 +51,5 @@
 }
 
 .card-content {
-    color: #000000; // Cambia este código de color al que prefieras
+    color: #000000;
 }

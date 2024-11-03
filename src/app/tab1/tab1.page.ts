@@ -76,6 +76,8 @@ export class Tab1Page {
   // Función para abrir la previsualización de la película
   openPrevisualizarPelicula(id: string) {
     this.router.navigate(['previsualizar-pelicula', id]);
+    
+  // Función para obtener,guardar,comparar datos desde la API DragonBall
   }
   openDetallePersonaje(id: number) {
     const personaje = this.listaDragonball.find(p => p.id === id);
