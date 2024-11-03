@@ -1,0 +1,140 @@
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                         ION COMPONENTS                                          ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+.ion-grid-container {
+    padding: 1rem;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                     INFORMACIÓN PELÍCULA                                        ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+.container-info-pelicula .card-info {
+    --background: transparent;
+    box-shadow: none;
+    padding: 0px;
+    text-align: center;
+}
+
+.container-info-pelicula .imagen {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 18rem;
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: center 15%;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+    mask-image: linear-gradient(to bottom, #121212 50%, transparent 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-info .title-pelicula {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.card-info .subtitle-pelicula {
+    font-size: 0.95rem;
+}
+
+.card-info .btn-continuar-viendo {
+    --background: #ffaa00;
+    --box-shadow: none;
+    --border-radius: 0.5rem;
+    --color: #121212;
+    --ripple-color: rgba(0, 0, 0, 0.5);
+
+    margin-top: 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.card-info .btn-arrendar-pelicula {
+    --background: #427ff8;
+    --box-shadow: none;
+    --border-radius: 0.5rem;
+    --color: #121212;
+    --ripple-color: rgba(0, 0, 0, 0.5);
+
+    margin-top: 0.65rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.card-info .sinopsis {
+    font-size: 0.9rem;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                        OPCION BOTONES                                           ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+.card-info .row-botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+.card-info .col-botones {
+    padding: 0px;
+}
+
+.card-info .boton-opciones {
+    --background: transparent;
+    --box-shadow: none;
+    --color: white;
+
+    font-size: 0.8rem;
+    text-transform: none;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                        LOADING SPINNER                                           ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+.loading-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.loading-placeholder ion-spinner {
+    --color: #ffaa00;
+    width: 3rem;
+    height: 3rem;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                    EFECTO FADE IN FADE OUT                                      ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadein 0.25s ease-in-out forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeout 0.25s ease-in-out forwards;
+}

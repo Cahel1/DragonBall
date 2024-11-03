@@ -1,0 +1,14 @@
+<div class="pelicula-card">
+  <img [src]="'https://lightgrey-owl-901213.hostingersite.com/portada_peliculas' + pelicula.poster_path"
+    alt="{{pelicula.title}}" class="pelicula-imagen" (click)="openPrevisualizarPelicula(pelicula.id)" />
+  <div class="pelicula-dato">
+    <div class="pelicula-titulo">{{ pelicula.title }}
+    </div>
+  </div>
+  <div class="pelicula-botones">
+    <fa-icon [icon]="isWatchList?faHeartCircle :faHeartCirclePlus" (click)="onClickWatchlist()"> </fa-icon>
+    <fa-icon [icon]="faCartPlus"> </fa-icon>
+
+  </div>
+
+</div>

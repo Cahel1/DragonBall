@@ -1,0 +1,58 @@
+.character-detail {
+    padding: 0px;
+    margin: 10px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    .character-image {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 0%;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 8px rgba(255, 255, 11, 0.742);
+    }
+
+    h2 {
+        font-size: 26px;
+        color: #ff6347;
+        /* Color llamativo para el nombre del personaje */
+        font-weight: bold;
+        margin: 8px 0;
+    }
+
+    p {
+        font-size: 16px;
+        color: #525a7a;
+        margin: 5px 0;
+
+        strong {
+            color: #1a1e3d;
+        }
+    }
+}
+
+.detail-box {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #e1e5f2;
+    margin: 8px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo personalizado para el botón Back */
+ion-toolbar {
+    ion-title {
+        color: #000000;
+        /* Color llamativo para el título del personaje */
+    }
+
+    ion-button {
+        color: #171311;
+        /* Color llamativo para el botón "Back" */
+        font-weight: bold;
+        font-size: 16px;
+    }
+}

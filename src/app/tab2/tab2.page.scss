@@ -1,0 +1,123 @@
+/*--------------------------  IMAGEN Logo Titulos  --------------------------*/
+.img-title-toolbar {
+  padding-top: 0.25rem;
+  min-height: 3rem;
+  max-height: 1.75rem;
+}
+
+.title-toolbar .toolbar-images {
+  display: flex;
+  flex-direction: column;
+  /* Organiza las imágenes en una columna */
+  align-items: center;
+  /* Centra las imágenes */
+}
+
+.img-title-toolbar {
+  width: auto;
+  max-width: 80%;
+  /* Ajusta el ancho máximo si es necesario */
+  height: auto;
+  margin-bottom: 0.5rem;
+  /* Ajusta el espaciado entre las imágenes */
+}
+
+.toolbar-images img:last-child {
+  margin-bottom: 0;
+  /* Elimina el margen inferior en la última imagen */
+}
+
+/*--------------------------  GRID PADDING  --------------------------*/
+.grid-padding {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/*--------------------------  TITULO SEGUIR VIENDO --------------------------*/
+.titulo-tendencias {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/*--------------------------  CANTIDAD DE PELÍCULAS A MOSTRAR  --------------------------*/
+.grid-peliculas {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  height: 100%;
+  gap: 0.5rem;
+  padding: 0.25rem;
+}
+
+/*--------------------------  PERSONALIZACIÓN DE LA PORTADA DE LAS PELICULAS MÁS POPULARES  --------------------------*/
+.lista-peliculas-tendencia-global .pelicula-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  height: 100%;
+}
+
+.lista-peliculas-tendencia-global .imagen-continuar {
+  width: 100%;
+  min-height: 9rem;
+  max-height: max-content;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.lista-peliculas-tendencia-global .nombre-continuar {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                    EFECTO FADE IN FADE OUT                                      ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadein 0.25s ease-in-out forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeout 0.25s ease-in-out forwards;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                    RESOLUCION PARA COMPUTADORAS                                 ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+
+@media (min-width: 768px) {
+  .grid-peliculas {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

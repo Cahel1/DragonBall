@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Botón de regreso a la pestaña de inicio -->
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <!-- Título de la página (puede ser modificado en el futuro) -->
+    <ion-title>Crea tu cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="login-grid">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size-md="6" size-lg="4" size-sm="12" size-xs="12" class="ion-text-center login-column">
+        <img src="../../assets/icons/icon-512.webp" alt="User Avatar" class="imagen-circular" />
+        <h1 class="texto-bienvenido">Crea tu cuenta</h1>
+        <p>Llena los siguientes campos para registrarte</p>
+
+        <!-- Campo para Nombre Completo -->
+        <ion-item class="input-item">
+          <ion-label position="floating">Nombre Completo</ion-label>
+          <ion-input type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Campo para Correo Electrónico -->
+        <ion-item class="input-item">
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" required></ion-input>
+        </ion-item>
+
+        <!-- Campo para Contraseña -->
+        <ion-item class="input-item">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+
+        <!-- Campo para Confirmar Contraseña -->
+        <ion-item class="input-item">
+          <ion-label position="floating">Confirmar Contraseña</ion-label>
+          <ion-input type="password" required></ion-input>
+        </ion-item>
+
+        <!-- Botón de Registrar -->
+        <ion-button expand="block" class="ion-margin-top">Registrar</ion-button>
+
+        <!-- Texto para iniciar sesión si ya se tiene cuenta -->
+        <ion-text class="texto-registro ion-margin-top">
+          ¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

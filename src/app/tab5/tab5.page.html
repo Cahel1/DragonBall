@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="$blockbuster-blue">
+    <ion-buttons slot="start">
+
+      <ion-menu-button></ion-menu-button>
+
+    </ion-buttons>
+    <ion-title class="ion-text-center title-toolbar">
+      <div class="toolbar-images">
+        <img class="img-title-toolbar" src="../../assets/imagenes/toolbar_blockbuster.png" alt="Blockbuster">
+        <img class="img-title-toolbar" src="../../assets/imagenes/DBToolbar.png" alt="Dragon Ball">
+      </div>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fade-in">
+
+  <ion-grid class="grid-padding" [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">
+
+        <!-- Contenido nuevo perfil -->
+        <div class="perfil-header">
+          <img src="../../assets/imagenes/lucho_jara.png" alt="Foto de perfil" class="perfil-avatar" />
+          <div class="perfil-info">
+            <h2 class="perfil-nombre">Luis Jara</h2>
+            <p class="perfil-username">&#64;luiscantanteoficial</p>
+            <p class="perfil-bio">Hello ✌ <br>Soy un amante del cine de Blockbuster</p>
+            <ion-button class="btn-editar-perfil">
+              Editar Perfil
+            </ion-button>
+          </div>
+        </div>
+
+        <!-- Estadísticas del perfil del user-->
+        <div class="perfil-stats">
+          <div class="stat-item">
+            <h3>69</h3>
+            <p>Películas</p>
+          </div>
+          <div class="stat-item">
+            <h3>8</h3>
+            <p>Seguidores</p>
+          </div>
+          <div class="stat-item">
+            <h3>5.6K</h3>
+            <p>Siguiendo</p>
+          </div>
+        </div>
+
+        <!-- Navegacion de opciones para el usuario, lo que ha visto escuchado etc que se yo -->
+        <div class="perfil-segment-wrapper">
+          <ion-segment value="videos" class="perfil-segment" scrollable="true">
+            <ion-segment-button value="videos">Videos</ion-segment-button>
+            <ion-segment-button value="audio">Audio</ion-segment-button>
+            <ion-segment-button value="schedule">Programación</ion-segment-button>
+            <ion-segment-button value="chat">Chat</ion-segment-button>
+            <ion-segment-button value="podcast">Podcast</ion-segment-button>
+          </ion-segment>
+        </div>
+
+        <!-- Contenido que a visto el luchito jara -->
+        <div class="perfil-content">
+          <div class="columna">
+            <img src="../../assets/imagenes/chekopete_perfil.png" alt="Chekopete" class="foto-grande" />
+          </div>
+          <div class="columna">
+            <img src="../../assets/imagenes/Broli.webp" alt="duolingopelicula" class="foto-pequena" />
+            <img src="../../assets/imagenes/soncomoniños.png" alt="soncomoniños" class="foto-pequena" />
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

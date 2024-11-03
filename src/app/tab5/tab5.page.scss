@@ -1,0 +1,205 @@
+/*--------------------------  IMAGEN Logo Titulos  --------------------------*/
+.img-title-toolbar {
+  padding-top: 0.25rem;
+  min-height: 3rem;
+  max-height: 1.75rem;
+}
+
+.title-toolbar .toolbar-images {
+  display: flex;
+  flex-direction: column;
+  /* Organiza las imágenes en una columna */
+  align-items: center;
+  /* Centra las imágenes */
+}
+
+.img-title-toolbar {
+  width: auto;
+  max-width: 80%;
+  /* Ajusta el ancho máximo si es necesario */
+  height: auto;
+  margin-bottom: 0.5rem;
+  /* Ajusta el espaciado entre las imágenes */
+}
+
+.toolbar-images img:last-child {
+  margin-bottom: 0;
+  /* Elimina el margen inferior en la última imagen */
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                    NUEVO PERFIL DE USUARIO                                      ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+/*--------------------------  GRID PADDING  --------------------------*/
+
+.perfil-container {
+  --background: #121212;
+  color: #ffffff;
+}
+
+.perfil-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: url("../../assets/imagenes/lucha_jara_portada.png");
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+  mask-image: linear-gradient(to bottom, #121212 85%, transparent 100%);
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0;
+  background-position: center;
+  color: #ffffff;
+}
+
+.perfil-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffaa00;
+  margin-bottom: 1rem;
+}
+
+.perfil-info {
+  text-align: center;
+}
+
+.perfil-nombre {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.perfil-username {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.2rem 0;
+}
+
+.perfil-bio {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.btn-editar-perfil {
+  --background: #ffaa00;
+  --box-shadow: none;
+  --border-radius: 0.5rem;
+  --color: #121212;
+  --ripple-color: rgba(0, 0, 0, 0.5);
+
+  margin-top: 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.perfil-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.stat-item p {
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.perfil-segment-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.perfil-segment-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.perfil-segment {
+  background-color: #1f1f1f;
+  margin: 1rem 0;
+  display: inline-flex;
+  width: max-content;
+}
+
+ion-segment-button {
+  --color-checked: #ffaa00;
+  --indicator-color: #ffaa00;
+  color: #7f7d7d;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.perfil-content {
+  display: flex;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.foto-grande {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.foto-pequena {
+  width: 100%;
+  height: 48%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                    EFECTO FADE IN FADE OUT                                      ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadein 0.25s ease-in-out forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeout 0.25s ease-in-out forwards;
+}

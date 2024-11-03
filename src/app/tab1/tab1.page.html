@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center title-toolbar">
+      <div class="toolbar-images">
+        <img class="img-title-toolbar" src="../../assets/imagenes/toolbar_blockbuster.png" alt="Blockbuster">
+        <img class="img-title-toolbar" src="../../assets/imagenes/DBToolbar.png" alt="Dragon Ball">
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="fade-in">
+
+  <!-- slider películas inicio -->
+  <ion-grid [fixed]="true">
+    <swiper-container speed="500" class="swiper-banner-estrenos" pagination="true" pagination-clickable="true"
+      navigation="false" space-between="10" centered-slides="true" autoplay-delay="2500"
+      autoplay-disable-on-interaction="false">
+      <swiper-slide><img class="imagen" src="assets/imagenes/Dragon-BallR.webp" alt="slider3"></swiper-slide>
+      <swiper-slide><img class="imagen" src="assets/imagenes/DragonBall.jpg" alt="slider1"><br></swiper-slide>
+      <swiper-slide><img class="imagen" src="assets/imagenes/DragonBallZ.webp" alt="slider2"></swiper-slide>
+      <swiper-slide><img class="imagen" src="assets/imagenes/DragonBallS.jpg" alt="slider3"></swiper-slide>
+    </swiper-container>
+  </ion-grid>
+
+  <!-- titulo categorías -->
+  <ion-grid class="titulo-categorias" [fixed]="true">
+    <ion-col size="auto" class="titulo">Categorías</ion-col>
+  </ion-grid>
+
+  <!-- lista de categorías -->
+  <ion-grid class="category-scroll-container" [fixed]="true">
+    <ion-row class="ion-row-scroll-horizontal">
+      <ion-col size="auto" *ngFor="let category of categorias">
+        <button class="category-button" [ngClass]="{'selected-button': isCategorySelected(category)}"
+          (click)="selectCategory(category)">
+          {{ category }}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Peliculas- Series Dragon Ball  -->
+  <ion-grid class="DB-Titulo" [fixed]="true">
+    <ion-row>
+      <ion-col class="continuar-viendo">Franquicia Dragon Ball</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ver-todo">Ver todo</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- lista de Personajes DragonBall -->
+  <ion-grid class="DB-Titulo" [fixed]="true">
+    <ion-row class="ion-row-scroll-horizontal">
+
+      <ion-col size="auto" *ngFor="let personaje of listaDragonball" class="pelicula-item">
+        <img (click)="openDetallePersonaje(personaje.id)" class="imagen-dbz" [src]="personaje.image"
+          alt="{{personaje.name}}"> <br>
+        <ion-label class="nombre-continuar">{{personaje.name}}</ion-label>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- titulo continuar viendo -->
+  <ion-grid class="titulo-continuar-viendo" [fixed]="true">
+    <ion-row>
+      <ion-col class="continuar-viendo">Continuar viendo</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ver-todo">Ver todo</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- lista de películas seguir viendo -->
+  <ion-grid class="lista-peliculas-seguir-viendo" [fixed]="true">
+    <ion-row class="ion-row-scroll-horizontal">
+
+      <ion-col size="auto" *ngFor="let pelicontinuar of listContinuarViendo" class="pelicula-item">
+        <img (click)="openContinueMovie(pelicontinuar.id)" class="imagen-continuar" [src]="pelicontinuar.imagen"
+          alt="{{pelicontinuar.nombre}}"> <br>
+        <ion-label class="nombre-continuar">{{pelicontinuar.nombre}}</ion-label>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- titulo tendencia peliculas globales -->
+  <ion-grid class="titulo-continuar-viendo" [fixed]="true">
+    <ion-row>
+      <ion-col class="continuar-viendo">Nuevos Lanzamientos</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ver-todo">Ver todo</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- lista películas tendencia globales -->
+  <ion-grid class="lista-peliculas-tendencia-global" [fixed]="true">
+    <ion-row class="ion-row-scroll-horizontal">
+      <ion-col size="auto" class="pelicula-item" *ngFor="let pelicula of peliculasTendencia">
+        <img (click)="openPrevisualizarPelicula(pelicula.id)" class="imagen-continuar"
+          [src]="'https://lightgrey-owl-901213.hostingersite.com/portada_peliculas' + pelicula.poster_path"
+          alt="pelicula_{{pelicula.title}}"> <br>
+        <ion-label>
+          <p class="nombre-continuar">{{pelicula.title}}</p>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

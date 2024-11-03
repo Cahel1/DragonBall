@@ -1,0 +1,61 @@
+/*--------------------------  IMAGEN Logo Titulos  --------------------------*/
+.img-title-toolbar {
+    padding-top: 0.25rem;
+    min-height: 3rem;
+    max-height: 1.75rem;
+}
+
+.title-toolbar .toolbar-images {
+    display: flex;
+    flex-direction: column;
+    /* Organiza las imágenes en una columna */
+    align-items: center;
+    /* Centra las imágenes */
+}
+
+.img-title-toolbar {
+    width: auto;
+    max-width: 80%;
+    /* Ajusta el ancho máximo si es necesario */
+    height: auto;
+    margin-bottom: 0.5rem;
+    /* Ajusta el espaciado entre las imágenes */
+}
+
+.toolbar-images img:last-child {
+    margin-bottom: 0;
+    /* Elimina el margen inferior en la última imagen */
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+// ---------                                    EFECTO FADE IN FADE OUT                                      ---------//
+// -------------------------------------------------------------------------------------------------------------------//
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadein 0.25s ease-in-out forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeout 0.25s ease-in-out forwards;
+}

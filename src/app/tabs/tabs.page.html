@@ -1,0 +1,32 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" href="/tabs/tab1">
+      <fa-icon [icon]="faHouseChimney" size="xl" class="tab-icon"></fa-icon>
+      <ion-label>Inicio</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" href="/tabs/tab2">
+      <fa-stack class="boton-icono">
+        <fa-icon [icon]="faFilm" stackItemSize="2x" class="tab-icon"></fa-icon>
+        <fa-icon [icon]="faFire" animation="beat" transform="up-8 right-9" stackItemSize="1x" class="tab-icon"></fa-icon>
+      </fa-stack>
+      <ion-label>Lo más popular</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button (click)="onQr()">
+      <fa-icon [icon]="faQrcode" size="2xl" class="tab-icon"></fa-icon>
+      <ion-label>Qr</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="tab4" href="/tabs/tab4">
+      <fa-icon [icon]="faBagShopping" size="xl" class="tab-icon"></fa-icon>
+      <ion-label>Hacer pedido</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="tab5" href="/tabs/tab5">
+      <fa-icon [icon]="faUser" size="xl" class="tab-icon"></fa-icon>
+      <ion-label>Mi perfil</ion-label>
+    </ion-tab-button>
+    
+  </ion-tab-bar>
+</ion-tabs>

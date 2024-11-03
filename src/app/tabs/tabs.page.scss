@@ -1,0 +1,20 @@
+.boton-icono {
+  font-size: 9.5px;
+
+}
+
+ion-tab-button .tab-icon {
+  color: #ba8e27;
+}
+
+ion-tab-button.tab-selected .tab-icon {
+  color: #FF0000;
+}
+
+ion-tab-button ion-label {
+  color: #000000;
+}
+
+ion-tab-button.tab-selected ion-label {
+  color: #000000;
+}

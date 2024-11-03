@@ -1,0 +1,7 @@
+{
+  "name": "blockbuster",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

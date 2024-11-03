@@ -1,0 +1,55 @@
+.login-grid {
+    height: 100vh; /* Ocupar toda la altura de la pantalla */
+}
+
+.login-column {
+    padding: 20px; /* Espacio alrededor de la columna de registro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto más limpio */
+    background-color: rgb(249, 212, 0); /* Color de fondo amarillo */
+    border-radius: 15px; /* Bordes redondeados */
+
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Colocar los hijos en columna */
+    align-items: center; /* Centrar los hijos horizontalmente */
+}
+
+.imagen-circular {
+    width: 150px; /* Ajusta el tamaño según lo que se necesita */
+    height: 150px; /* Mantiene el tamaño del avatar */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen mantenga su forma sin distorsionarse */
+    margin-bottom: 15px; /* Espacio debajo del avatar */
+}
+
+h1.texto-bienvenido {
+    font-size: 24px; /* Tamaño del texto del encabezado */
+    font-weight: bold; /* Negrita para el encabezado */
+    margin: 20px 0 10px; /* Espaciado del encabezado */
+    color: #333; /* Color más oscuro para mejor contraste */
+}
+
+p {
+    margin-bottom: 20px; /* Espaciado debajo del párrafo */
+    color: #666; /* Color gris para el texto */
+}
+
+.input-item {
+    margin-bottom: 15px; /* Espaciado uniforme entre inputs */
+    width: 100%; /* Asegurar que ocupen todo el ancho */
+}
+
+ion-button {
+    --background: #3880ff; /* Color de fondo del botón */
+    --border-radius: 10px; /* Bordes redondeados del botón */
+}
+
+.texto-registro {
+    color: #333; /* Color más oscuro para el texto de registro */
+    margin-top: 20px; /* Espacio arriba del texto de registro */
+}
+
+@media (min-width: 768px) {
+    .login-column {
+        max-width: 400px; /* Limitar el tamaño en pantallas grandes */
+    }
+}

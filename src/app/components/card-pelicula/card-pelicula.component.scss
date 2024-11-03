@@ -1,0 +1,52 @@
+.pelicula-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.pelicula-imagen {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.pelicula-titulo {
+  background-color: #c68604; /* Color de fondo amarillo */
+  color: #000000;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bold;
+
+
+  text-align: center;
+}
+
+.pelicula-pecio {
+  background-color: #9cbae8;
+  color: #000000;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pelicula-botones{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  text-align: right;
+  padding: 9px;
+  fa-icon{
+    font-size: 30px;
+    margin-right: 5px;
+  }
+}
+.pelicula-dato{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

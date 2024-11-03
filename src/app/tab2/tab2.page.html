@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center title-toolbar">
+      <div class="toolbar-images">
+        <img class="img-title-toolbar" src="../../assets/imagenes/toolbar_blockbuster.png" alt="Blockbuster">
+        <img class="img-title-toolbar" src="../../assets/imagenes/DBToolbar.png" alt="Dragon Ball">
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fade-in">
+
+  <!-- titulo tendencias actuales -->
+  <ion-grid class="grid-padding titulo-tendencias" [fixed]="true">
+    <ion-row>
+      <ion-col class="ion-text-center">🔥 Lo más popular 🔥</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- lista de películas más populares -->
+  <ion-grid class="grid-padding lista-peliculas-tendencia-global" [fixed]="true">
+    <ion-row class="grid-peliculas">
+      <ion-col size="auto" (click)="openPrevisualizarPelicula(pelicula.id)" class="pelicula-item"
+        *ngFor="let pelicula of peliculas">
+        <img class="imagen-continuar"
+          [src]="'https://lightgrey-owl-901213.hostingersite.com/portada_peliculas' + pelicula.poster_path"
+          alt="pelicula_{{pelicula.title}}">
+        <ion-label class="nombre-continuar">{{pelicula.title}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-infinite-scroll (ionInfinite)="onIonInfiniteLoad($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-grid>
+
+</ion-content>

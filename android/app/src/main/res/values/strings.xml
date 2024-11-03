@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Blockbuster</string>
+    <string name="title_activity_main">Blockbuster</string>
+    <string name="package_name">com.grupo.blockbuster</string>
+    <string name="custom_url_scheme">com.grupo.blockbuster</string>
+</resources>

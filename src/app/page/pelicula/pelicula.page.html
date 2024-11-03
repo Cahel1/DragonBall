@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Película 🎞️</ion-title>
+    <ion-buttons slot="end">
+      <a class="boton-volver" (click)="onClickVolver()">
+        <fa-icon [icon]="faArrowLeft"></fa-icon>
+      </a>
+
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img *ngIf="pelicula.poster_path" [src]="'https://lightgrey-owl-901213.hostingersite.com/portada_peliculas' + pelicula.poster_path"
+      class="imagen-pelicula"></ion-img>
+
+    <ion-card-header>
+      <ion-card-title>{{ pelicula.title }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>Resumen: </strong>{{ pelicula.overview }}</p>
+      <p><strong>Fecha de estreno: </strong>{{ pelicula.release_date }}</p>
+      <p><strong>Puntuación: </strong>{{ pelicula.popularity }}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ character?.name }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="character-detail">
+    <img [src]="character?.image" alt="{{ character?.name }}" class="character-image" />
+    <h2>{{ character?.name }}</h2>
+    <div class="detail-box">
+      <p><strong>Raza:</strong> {{ character?.race }}</p>
+      <p><strong>Genero:</strong> {{ character?.gender }}</p>
+    </div>
+    <div class="detail-box">
+      <p><strong>Ki:</strong> {{ character?.ki }}</p>
+      <p><strong>Max Ki:</strong> {{ character?.maxKi }}</p>
+    </div>
+    <div class="detail-box">
+      <p><strong>Afiliación:</strong> {{ character?.affiliation }}</p>
+      <p><strong>Descripción:</strong> {{ character?.description }}</p>
+    </div>
+  </div>
+</ion-content>

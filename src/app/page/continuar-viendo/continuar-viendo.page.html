@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div *ngIf="pelicula">
+
+    <!-- ion grid información película -->
+    <ion-grid class="ion-grid-container container-info-pelicula" [fixed]="true">
+
+      <!-- card info película-->
+      <ion-card class="card-info">
+        <!-- video de la película -->
+        <video #videoPlayer preload="metadata" class="video-player-pelicula fade-in">
+          <source [src]="currentVideoUrl" type="video/mp4" />
+        </video>
+        <!-- imagen portada -->
+        <img #imagenPortada class="imagen fade-in" alt="{{pelicula.nombre}}" [src]="pelicula.imagen" />
+        <ion-card-header>
+          <ion-card-title class="title-pelicula">{{pelicula.nombre}}</ion-card-title>
+          <ion-card-subtitle class="subtitle-pelicula">{{pelicula.fecha}} • {{pelicula.categoria}} •
+            {{pelicula.duration}}</ion-card-subtitle>
+          <ion-button class="btn-continuar-viendo" (click)="reproducirPelicula(pelicula.url)">
+            <ion-icon slot="start" name="{{stateIconPelicula}}"></ion-icon>
+            {{stateTextPelicula}}
+          </ion-button>
+          <ion-button class="btn-arrendar-pelicula">
+            <ion-icon slot="start" name="folder-open"></ion-icon>
+            Ya en tu biblioteca
+          </ion-button>
+        </ion-card-header>
+
+        <!-- card content -->
+        <ion-card-content class="sinopsis">
+
+          <!-- sinopsis -->
+          {{pelicula.sinopsis}}
+          <!-- ion row opcion botones -->
+
+          <ion-row class="row-botones">
+            <ion-col size="auto" class="col-botones">
+              <ion-button class="boton-opciones">
+                <ion-icon slot="start" name="bookmark"></ion-icon>
+                Watchlist
+              </ion-button>
+            </ion-col>
+            <ion-col size="auto" class="col-botones">
+              <ion-button class="boton-opciones">
+                <ion-icon slot="start" name="heart"></ion-icon>
+                Me gusta
+              </ion-button>
+            </ion-col>
+          </ion-row>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-grid>
+
+  </div>
+  <div *ngIf="!pelicula">
+    <p>No se encontró la película.</p>
+  </div>
+
+</ion-content>

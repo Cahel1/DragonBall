@@ -1,0 +1,21 @@
+.imagen-pelicula {
+  max-width: 100%; /* La imagen no será más ancha que su contenedor */
+  max-height: 300px; /* Limita la altura máxima de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  display: block; /* Se asegura de que se comporte como un bloque */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+ion-card-header {
+  margin-top: 15px; /* Crea un espacio adicional entre la imagen y el título */
+}
+
+ion-card-content {
+  padding: 15px; /* Añade un padding para separar bien el texto */
+  background-color: #333; /* Color de fondo para diferenciar del contenido */
+  color: #fff; /* Asegura que el texto sea blanco para buena legibilidad */
+}
+
+ion-card-content p {
+  margin-bottom: 10px; /* Agrega espacio entre los párrafos del texto */
+}
