@@ -5,6 +5,13 @@
     max-height: 1.75rem;
 }
 
+.clickable {
+    cursor: pointer;
+    /* Change the mouse pointer to a pointer when hovering */
+    color: blue;
+    /* Optional: change the color to indicate it's clickable */
+}
+
 .title-toolbar .toolbar-images {
     display: flex;
     flex-direction: column;

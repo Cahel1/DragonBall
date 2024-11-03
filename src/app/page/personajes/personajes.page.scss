@@ -1,0 +1,63 @@
+.personaje-card {
+    width: 70%;
+    max-width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px auto;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: #f0f0f0;
+}
+
+.personaje-card:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    text-align: center;
+    color: #e2ff04;
+    padding: 10px;
+    /* Añade un poco de espacio entre el texto y el borde */
+    border-radius: 5px;
+    /* Redondea las esquinas (opcional) */
+    font-weight: bold;
+    /* Establece el texto en negrita */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* Cambia la fuente a Comic Sans */
+    text-shadow: 1px 1px 0 #FFA500,
+        /* Sombra de texto a la derecha */
+        -1px -1px 0 #020202,
+        /* Sombra de texto a la izquierda */
+        1px -1px 0 #330d9a,
+        /* Sombra de texto arriba a la derecha */
+        -1px 1px 0 #000000;
+    /* Sombra de texto abajo a la izquierda */
+}
+
+
+
+.back {
+    color: #ffaa00
+}
+
+.card-image {
+    width: 150%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.card-title,
+.card-subtitle {
+    color: #011070;
+    margin: 5px 0;
+}
+
+.card-content {
+    color: #000000; // Cambia este código de color al que prefieras
+}

@@ -12,6 +12,6 @@ export class DragonballService {
   ) { }
 
   obtenerFranquicia(){
-    return this.http.get<DragonBallCharacters>('https://dragonball-api.com/api/characters');
+    return this.http.get<DragonBallCharacters>('https://dragonball-api.com/api/characters?limit=58');
   }
 }

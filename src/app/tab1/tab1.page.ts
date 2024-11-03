@@ -33,6 +33,9 @@ export class Tab1Page {
 
   selectedCategoria: string = this.categorias[0]; // Inicia la categoría en 'Todos'
 
+  irAPersonajes() {
+    this.router.navigate(['/personajes']);
+  }
   // Función para verificar cual categoría seleccionó el usuario
   selectCategory(categoria: string) {
     this.selectedCategoria = categoria;
@@ -51,8 +54,10 @@ export class Tab1Page {
   listaDragonball: PersonajeDragonBall[] = [];// Lista almacenar DB
   peliculasTendencia: any[] = []; // Lista para almacenar peliculas en tendencia
 
+
+  
   ngOnInit() {
-    
+
     this.obtenerPersonajesDragonBall();
     // Cargamos desde la API la lista de películas en tendencia
     this.blockbusterAPI.getPeliculas(15, 0, "release_date").subscribe((pelicula) => {

@@ -16,6 +16,11 @@ export const routes: Routes = [
   {
     path: 'detalle-dragonball',
     loadComponent: () => import('./page/detalle-dragonball/detalle-dragonball.page').then( m => m.DetalleDragonballPage)
+    
+  },
+  {
+    path: 'personajes',
+    loadComponent: () => import('./page/personajes/personajes.page').then( m => m.PersonajesPage)
   },
 
   // Rutas que usan el menú principal
@@ -48,9 +53,5 @@ export const routes: Routes = [
       },
     ]
 
-  }
-
-
-
-
+  },
 ];

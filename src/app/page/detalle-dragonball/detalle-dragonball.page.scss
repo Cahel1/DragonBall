@@ -17,7 +17,7 @@
     h2 {
         font-size: 26px;
         color: #ff6347;
-        /* Color llamativo para el nombre del personaje */
+
         font-weight: bold;
         margin: 8px 0;
     }
@@ -42,16 +42,14 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo personalizado para el botón Back */
 ion-toolbar {
     ion-title {
         color: #000000;
-        /* Color llamativo para el título del personaje */
+
     }
 
     ion-button {
         color: #171311;
-        /* Color llamativo para el botón "Back" */
         font-weight: bold;
         font-size: 16px;
     }

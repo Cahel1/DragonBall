@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="back" (click)="goBack()">Volver</ion-button>
+    </ion-buttons>
+    <ion-title class="title">Personajes de Dragon Ball</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let personaje of listaDragonball">
+        <ion-card class="personaje-card">
+          <img alt="Personaje de Dragon Ball" [src]="personaje.image" class="card-image" />
+          <ion-card-header>
+            <ion-card-title class="card-title">{{ personaje.name }}</ion-card-title>
+            <ion-card-subtitle class="card-subtitle">{{ personaje.race }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content class="card-content">
+            {{ personaje.description }}
+        </ion-card-content>        
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
